@@ -1,0 +1,31 @@
+eureka:
+  #  instance:
+  #    appname: config-server
+  #    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka/
+
+server:
+  port: 8888
+
+spring:
+  config:
+    name: config-server
+  #  profiles:
+  #    active: git
+  application:
+    name: config-server
+  cloud:
+    config:
+      enabled: true
+      server:
+        #        bootstrap: false
+        git:
+          uri: https://github.com/testGitFeng/springCloudConfig
+          default-label: master
+          username:
+          password:
+
+
+
